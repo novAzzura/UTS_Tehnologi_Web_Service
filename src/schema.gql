@@ -1,0 +1,21 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type AbsensiType {
+  status_kehadiran: String!
+}
+
+type PenjualanType {
+  total_pendapatan: Float!
+}
+
+type KaryawanType {
+  nama: String!
+  absensi: [AbsensiType!]!
+  penjualan: [PenjualanType!]!
+}
+
+type Query {
+  karyawan(id: Int!): KaryawanType!
+}
